@@ -2,16 +2,28 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "github-private-packages",
   "title": "GitHub Private Packages",
-  "description": "Search and inspect details for private packages you have access to across registries on github.",
+  "version": "1.0.0",
+  "description": "Search and inspect details for private packages you have access to across registries on GitHub.",
   "icon": "icon.png",
   "author": "Borgund",
   "license": "MIT",
+  "categories": ["Developer Tools", "Productivity"],
+  "keywords": [
+    "github",
+    "packages",
+    "registry",
+    "npm",
+    "docker",
+    "maven",
+    "rubygems",
+    "nuget"
+  ],
   "commands": [
     {
       "name": "search-packages",
       "title": "Search Packages",
       "subtitle": "GitHub",
-      "description": "Lists and makes it possible to filter all private packages you have access to on GitHub Package registry.",
+      "description": "Discover, filter, and manage private packages across multiple registries including npm, Docker, Maven, RubyGems, and NuGet.",
       "icon": "icon.png",
       "mode": "view"
     }
@@ -50,12 +62,12 @@
       ]
     },
     {
-      "title": "Preffered NPM package manager",
+      "title": "Preferred NPM Package Manager",
       "name": "npmPackageManager",
       "type": "dropdown",
       "required": false,
-      "label": "Preffered NPM package manager",
-      "description": "Preffered NPM package manager",
+      "label": "Preferred NPM Package Manager",
+      "description": "Choose your preferred NPM package manager for install commands",
       "default": "pnpm",
       "data": [
         { "title": "npm", "value": "npm" },
@@ -82,6 +94,7 @@
     "dev": "ray develop",
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
+    "type-check": "ray type-check",
     "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
     "publish": "npx @raycast/api@latest publish"
   }
